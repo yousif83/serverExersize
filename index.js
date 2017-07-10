@@ -1,6 +1,7 @@
 var express = require("express")
 var server =express()
 var yousif=require('./yousif.json')
+var port=process.env.port || 8080
 server.get('/',function(request,response){
   response.send("replace {name}   :")
 })
@@ -17,4 +18,4 @@ server.get('*', function (request, response) {
   response.send("Dude, wrong page")
 })
 
-server.listen(3000)
+server.listen(port)
